@@ -22,5 +22,11 @@ if (search === "Movie-this") {
   liri.movieThis(term);
 };
 
+if (search === "Concert-this") {
+    console.log("Searching for Artist");
+    liri.concertThis(term);
+  };
+
+
 
 

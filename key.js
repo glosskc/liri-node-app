@@ -7,7 +7,7 @@ exports.spotify = {
  
 
 require("dotenv").config();
-
+var moment = require("moment");
 // var spotify = new Spotify(keys.spotify);
 var fs = require("fs");
 var axios = require("axios");
@@ -46,25 +46,24 @@ var Liri = function() {
         });
       };
     
-    //   this.findActor = function(actor) {
-    //     const URL = "http://api.tvmaze.com/search/people?q=" + actor;
-    //     axios.get(URL).then(function(response){
+      this.concertThis = function(artist) {
+        const URL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
+        axios.get(URL).then(function(response){
     
-    //       var searchData = response.data[0].person;
+          var jsonData= response.data[0];
     
-    //       var actorData = [
-    //         "Name: " + searchData.name,
-    //         "Birhtday: " + searchData.birthday,
-    //         "Gender: " + searchData.gender,
-    //         "Country: " + searchData.country.name,
-    //         "URl: " + searchData._links.self.href,
-    //       ].join("\n\n");
+          var artistData = [
+            "Artist: " + artist,
+            "Venue Name: " + jsonData.venue.name,
+            "Venue Location: " + jsonData.venue.city + ", " + jsonData.venue.region,
+            "Date of Event: " + moment(jsonData.datetime).format('l'),
+          ].join("\n\n");
     
-    //       fs.appendFile("log.txt", searchData + divider, function(err){
-    //         if(err)throw err;
-    //         console.log(actorData);
-    //       });
-    //     });
+          fs.appendFile("log.txt", artistData + divider, function(err){
+            if(err)throw err;
+            console.log(artistData);
+          });
+        });
       
     
         // Add code to search the TVMaze API for the given actor
@@ -72,7 +71,7 @@ var Liri = function() {
         // Append the actor's name, birthday, gender, country, and URL to the `log.txt` file
         // Print this information to the console
       };
-    // };
+    };
    
     
     // Grab search command line argument

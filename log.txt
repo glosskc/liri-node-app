@@ -1,0 +1,59 @@
+Artist: Maroon 5
+
+Venue Name: Mollenpark
+
+Venue Location: Aalborg, 
+------------------------------------------------------------
+
+Artist: Maroon 5
+
+Venue Name: Mollenpark
+
+Venue Location: Aalborg, 
+------------------------------------------------------------
+
+Artist: Maroon 5
+
+Venue Name: Mollenpark
+
+Venue Location: Aalborg, 
+
+Date of Event: 6/1/2019
+------------------------------------------------------------
+
+Artist: Maroon 5
+
+Venue Name: Mollenpark
+
+Venue Location: Aalborg, 
+
+Date of Event: 6/1/2019
+------------------------------------------------------------
+
+Artist: Taylor
+
+Venue Name: Basing House
+
+Venue Location: London, 
+
+Date of Event: 6/28/2019
+------------------------------------------------------------
+
+Artist: Mercy Me
+
+Venue Name: MercyMe's Imagine Nation Tour / Rosemont Theatre
+
+Venue Location: Rosemont, IL
+
+Date of Event: 4/28/2019
+------------------------------------------------------------
+
+Artist: Rend Collective
+
+Venue Name: Concord Pavilion
+
+Venue Location: Concord, CA
+
+Date of Event: 6/7/2019
+------------------------------------------------------------
+
