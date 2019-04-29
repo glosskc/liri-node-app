@@ -57,3 +57,21 @@ Venue Location: Concord, CA
 Date of Event: 6/7/2019
 ------------------------------------------------------------
 
+Artist: Pedro the Lion
+
+Venue Name: recordBar
+
+Venue Location: Kcmo, MO
+
+Date of Event: 5/1/2019
+------------------------------------------------------------
+
+Artist: Pedro the Lion
+
+Venue Name: recordBar
+
+Venue Location: Kcmo, MO
+
+Date of Event: 5/1/2019
+------------------------------------------------------------
+

@@ -1,25 +1,20 @@
-console.log('this is loaded');
-
-exports.spotify = {
-  id: process.env.SPOTIFY_ID,
-  secret: process.env.SPOTIFY_SECRET
-};
- 
 
 require("dotenv").config();
 var moment = require("moment");
+var keys = require("./keys.js")
 // var spotify = new Spotify(keys.spotify);
 var fs = require("fs");
 var axios = require("axios");
+const Spotify = require('node-spotify-api');
+const spotify = new Spotify(keys.spotify);
 
 // Create the TV constructor
 var Liri = function() {
-    // var search =  process.argv[2];
-    // var term = process.argv.slice(3).join(" ");
+   
       // divider will be used as a spacer between the tv data we print in log.txt
       var divider = "\n------------------------------------------------------------\n\n";
     
-      // findShow takes in the name of a tv show and searches the tvmaze API
+      // findShow takes in the name of a movie and searches the omdb API
       this.movieThis = function(movie) {
         const URL = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
     
@@ -64,15 +59,44 @@ var Liri = function() {
             console.log(artistData);
           });
         });
-      
+
+
+
+        this.spotifyThis = function(searchSong){
+            spotify.search({ type: 'track', query: searchSong }, function (error, data) {
+                const URL = "https://api.spotify.com/v1/albums/{id}/tracks";
+        axios.get(URL).then(function(response){
     
-        // Add code to search the TVMaze API for the given actor
-        // The API will return an array containing multiple actors, just grab the first result
-        // Append the actor's name, birthday, gender, country, and URL to the `log.txt` file
-        // Print this information to the console
+
+               
+            
+                  // Build formatted 'songResult' to display
+                  var songResult = [
+                    "Artist(s): " + song.artists[0].name,
+                    "Song's name: " + song.name,
+                    "A preview link of this song form Spotify: " + song.preview_url,
+                    "Album: " + song.album.name + " (Released date: " + song.album.release_date,
+                  ].join("\n\n");
+
+        
+                  // Output the formatted information to the user's terminal/bash window
+                  /* console.log(songResult); */
+            
+                  // Output the formatted data to log.txt
+                  fs.appendFile("Log.txt", songResult + divider, function(err){
+                      if(err)throw err;
+                      console.log(songResult)
+                  });
+                  
+            
+                  console.log(response);
+               
+                });
+            });
+        };
       };
     };
-   
+    
     
     // Grab search command line argument
     

@@ -43,3 +43,33 @@ Plot: A computer hacker learns from mysterious rebels about the true nature of h
 Actors: Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving
 ------------------------------------------------------------
 
+Movie Title: The Matrix
+
+Release Year: 1999
+
+IMDB Rating: 8.7/10
+
+Country: USA
+
+Language: English
+
+Plot: A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.
+
+Actors: Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving
+------------------------------------------------------------
+
+Movie Title: The Matrix
+
+Release Year: 1999
+
+IMDB Rating: 8.7/10
+
+Country: USA
+
+Language: English
+
+Plot: A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.
+
+Actors: Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving
+------------------------------------------------------------
+
