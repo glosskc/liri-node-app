@@ -59,13 +59,13 @@ var Liri = function() {
             console.log(artistData);
           });
         });
-
+      }
 
 
         this.spotifyThis = function(searchSong){
             spotify.search({ type: 'track', query: searchSong }, function (error, data) {
-                const URL = "https://api.spotify.com/v1/albums/{id}/tracks";
-        axios.get(URL).then(function(response){
+        //         const URL = "https://api.spotify.com/v1/albums/{id}/tracks";
+        // axios.get(URL).then(function(response){
     
 
                
@@ -92,10 +92,9 @@ var Liri = function() {
                   console.log(response);
                
                 });
-            });
+            // });
         };
-      };
-    };
+      }
     
     
     // Grab search command line argument
